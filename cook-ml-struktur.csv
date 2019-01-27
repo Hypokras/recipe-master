@@ -1,0 +1,84 @@
+XML-Header;;;;;;Type;Required;Description
+cookml;;;;;;Element;X;Root of the actual data
+;version;;;;;Tag;X;Revision number of the CML specification use to create the instance file
+;name;;;;;Tag;X;Name of the recipe collection contained in this file
+;prog;;;;;Tag;X;Name of the program which generated this instance
+;progver;;;;;Tag;X;Version number of “prog”
+;recipe;;;;;Element;X;Root of the individual recipe (Sequence)
+;;lang;;;;Tag;;Language used in the recipe
+;;head;;;;Element;X;Informational data to a recipe
+;;;title;;;Tag;X;Title of the recipe
+;;;rid;;;Tag;;Unique recipe identifier
+;;;servingqty;;;Tag;X;Serving quantity
+;;;servingtype;;;Tag;X;Unit of serving quantity (person, piece, etc.)
+;;;createdate;;;Tag;;Creating date
+;;;createuser;;;Tag;;Creator/Recorder of recipe
+;;;createemail;;;Tag;;EMail of creator
+;;;changedate;;;Tag;;Date of the most recent change
+;;;changeuser;;;Tag;;Person, who made the most recent change
+;;;changeemail;;;Tag;;EMail of “changeuser”
+;;;timeallqty;;;Tag;;Total preparation time for the recipe
+;;;timeprepqty;;;Tag;;Preparation time
+;;;timecookqty;;;Tag;;Cooking time
+;;;costs;;;Tag;;Cost of the recipe
+;;;country;;;Tag;;Producing country
+;;;proteins;;;Tag;;Quantity of proteins
+;;;carbohydrates;;;Tag;;Quantity of carbohydrates
+;;;fat;;;Tag;;Quantity of fat
+;;;wwpoints;;;Tag;;Weight-Watcher points or something like that
+;;;cat;;;Element;X;Categories (recipe grouping) (Sequence)
+;;;hint;;;Element;;Key words for the recipe (Sequence)
+;;;sourceline;;;Element;;Free format information to the recipe source (Sequence)
+;;;card;;;Element;;Detailed description of the recipe (e.g. for a restaurant menu) (Sequence)
+;;;allergies;;;Element;;Allergic substances
+;;;;allergy;;Tag;!;Data for an allergic substance (Sequence)
+;;;;name;;Tag;!;Name of the allergic substance
+;;;;contains;;Tag;!;Is allergic substance in the recipe
+;;;content;;;Element;;Information on substances contained in recipe ingredients
+;;;;type;;Tag;!;Type of substance
+;;;;value;;Tag;!;Value/quantity of substance
+;;;picture;;;Element;;Image of the recipe (Sequence)
+;;;;file;;Tag;!;Path to the image, either local or on the web
+;;;picbin;;;Element;;Image of the recipe, embedded in the XML file (Sequence)
+;;;;format;;Tag;!;Format of the embedded image
+;;custom;;;;Element;;Field for additional data
+;;;name;;;Tag;!;Name of the “custom” field
+;;;datatype;;;Tag;!;Data type of the custom field
+;;;value;;;Tag;!;Value of the custom field
+;;part;;;;Element;X;Grouping of an ingredient unit (Sequence)
+;;;title;;;Tag;X;Title of the ingredient unit
+;;;ingredient;;;Element;X;Ingredient (root of each ingredient) (Sequence)
+;;;;qty;;Tag;X;Required quanity of ingredient
+;;;;unit;;Tag;X;Unit of the ingredient
+;;;;item;;Tag;X;Name of the ingredient
+;;;;inote;;Element;;Additional information, explanations to the ingredient in plain text (Sequence)
+;;;;bls;;Tag;;The ingredients BLS-Code (BLS – Bundeslebensmittelschlüssel)
+;;;;gram;;Tag;;Approximite value in grams for units which are not directly convertible
+;;;;shop;;Tag;;Flag, include in shopping list
+;;;;calc;;Tag;;Flag, ingredient should be considered in the nutrional calculation
+;;;;ridlink;;Tag;;RID to a recipe which is used as an ingredient
+;;;;preparation;;Element;;Preparation instructions for this particular ingredient
+;;preparation;;;;Element;X;Preparation/Recipe instructions
+;;;text;;;Element;X;Preparation instructions as a block of text
+;;;step;;;Element;X;Prepartion instructions as individual steps (Sequence)
+;;remark;;;;Element;;Remarks of a user/cook
+;;;user;;;Tag;;The name of the person making the remark
+;;;line;;;Tag;;The remark
+;menu;;;;;Element;;The root of a menu
+;;title;;;;Tag;!;Name of the menu
+;;date;;;;Tag;;Date the menue was served or planned to serve
+;;yield;;;;Tag;;Number of persons the menu was prepared for
+;;frontpage;;;;Element;;Text for the front page of the menucard (Sequence)
+;;;datatype;;;Tag;;"Datatype of the content, if ""rtf"" is used, repeat also with plain ""text"""
+;;backpage;;;;Element;;Text for the back page of the menucard (Sequence)
+;;;datatype;;;Tag;;"Datatype of the content, if ""rtf"" is used, repeat also with plain ""text"""
+;;mcustom;;;;Element;;Field for additional data
+;;;name;;;Tag;;Name of the “mcustom” field
+;;;datatype;;;Tag;;Data type of the “mcustom” field
+;;;value;;;Tag;;Value of the “mcustom” field
+;;mrecipe;;;;Element;;Recipe of a menu
+;;;title;;;Tag;;Title of the recipe menu item
+;;;rid;;;Tag;;“rid” – recipe identifier of the recipe menu item
+;;;amount;;;Tag;;Quantity for the recipe menu item (in the unit of the recipe)
+;;;persons;;;Tag;;Quantity of the menu item (always in the unit “person”)
+;;;desc;;;Element;;Additional information to the recipe menu item
