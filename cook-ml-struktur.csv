@@ -3,7 +3,7 @@ cookml;;;;;;Element;X;Root of the actual data
 ;version;;;;;Tag;X;Revision number of the CML specification use to create the instance file
 ;name;;;;;Tag;X;Name of the recipe collection contained in this file
 ;prog;;;;;Tag;X;Name of the program which generated this instance
-;progver;;;;;Tag;X;Version number of “prog”
+;progver;;;;;Tag;X;"Version number of ""prog"""
 ;recipe;;;;;Element;X;Root of the individual recipe (Sequence)
 ;;lang;;;;Tag;;Language used in the recipe
 ;;head;;;;Element;X;Informational data to a recipe
@@ -16,7 +16,7 @@ cookml;;;;;;Element;X;Root of the actual data
 ;;;createemail;;;Tag;;EMail of creator
 ;;;changedate;;;Tag;;Date of the most recent change
 ;;;changeuser;;;Tag;;Person, who made the most recent change
-;;;changeemail;;;Tag;;EMail of “changeuser”
+;;;changeemail;;;Tag;;"EMail of ""changeuser"""
 ;;;timeallqty;;;Tag;;Total preparation time for the recipe
 ;;;timeprepqty;;;Tag;;Preparation time
 ;;;timecookqty;;;Tag;;Cooking time
@@ -42,7 +42,7 @@ cookml;;;;;;Element;X;Root of the actual data
 ;;;picbin;;;Element;;Image of the recipe, embedded in the XML file (Sequence)
 ;;;;format;;Tag;!;Format of the embedded image
 ;;custom;;;;Element;;Field for additional data
-;;;name;;;Tag;!;Name of the “custom” field
+;;;name;;;Tag;!;"Name of the ""custom"" field"
 ;;;datatype;;;Tag;!;Data type of the custom field
 ;;;value;;;Tag;!;Value of the custom field
 ;;part;;;;Element;X;Grouping of an ingredient unit (Sequence)
@@ -52,7 +52,7 @@ cookml;;;;;;Element;X;Root of the actual data
 ;;;;unit;;Tag;X;Unit of the ingredient
 ;;;;item;;Tag;X;Name of the ingredient
 ;;;;inote;;Element;;Additional information, explanations to the ingredient in plain text (Sequence)
-;;;;bls;;Tag;;The ingredients BLS-Code (BLS – Bundeslebensmittelschlüssel)
+;;;;bls;;Tag;;The ingredients BLS-Code (BLS - Bundeslebensmittelschl�ssel)
 ;;;;gram;;Tag;;Approximite value in grams for units which are not directly convertible
 ;;;;shop;;Tag;;Flag, include in shopping list
 ;;;;calc;;Tag;;Flag, ingredient should be considered in the nutrional calculation
@@ -73,12 +73,12 @@ cookml;;;;;;Element;X;Root of the actual data
 ;;backpage;;;;Element;;Text for the back page of the menucard (Sequence)
 ;;;datatype;;;Tag;;"Datatype of the content, if ""rtf"" is used, repeat also with plain ""text"""
 ;;mcustom;;;;Element;;Field for additional data
-;;;name;;;Tag;;Name of the “mcustom” field
-;;;datatype;;;Tag;;Data type of the “mcustom” field
-;;;value;;;Tag;;Value of the “mcustom” field
+;;;name;;;Tag;;"Name of the ""mcustom"" field"
+;;;datatype;;;Tag;;"Data type of the ""mcustom"" field"
+;;;value;;;Tag;;"Value of the ""mcustom"" field"
 ;;mrecipe;;;;Element;;Recipe of a menu
 ;;;title;;;Tag;;Title of the recipe menu item
-;;;rid;;;Tag;;“rid” – recipe identifier of the recipe menu item
+;;;rid;;;Tag;;"""rid"" - recipe identifier of the recipe menu item"
 ;;;amount;;;Tag;;Quantity for the recipe menu item (in the unit of the recipe)
-;;;persons;;;Tag;;Quantity of the menu item (always in the unit “person”)
+;;;persons;;;Tag;;"Quantity of the menu item (always in the unit ""person"")"
 ;;;desc;;;Element;;Additional information to the recipe menu item
